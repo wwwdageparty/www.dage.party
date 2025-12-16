@@ -6,29 +6,71 @@
   <title>dage.party</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900 text-white font-sans px-6">
 
-  <main class="text-center space-y-6 max-w-lg">
-    <h1 class="text-4xl md:text-5xl font-bold">
-      Welcome to <span class="text-teal-400">dage.party</span>
-    </h1>
+<body class="min-h-screen flex flex-col items-center justify-center
+             bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900
+             text-white font-sans px-6">
 
-    <p class="text-white/70">
-      This site is under quiet construction.<br />
-      Meanwhile, you can check out our public GitHub repos.
-    </p>
+  <main class="w-full max-w-2xl text-center space-y-12">
 
-    <a href="https://github.com/wwwdageparty" target="_blank" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded transition">
-      Visit GitHub
-    </a>
+    <!-- Hero -->
+    <section class="space-y-4">
+      <h1 class="text-4xl md:text-5xl font-bold">
+        Welcome to <span class="text-teal-400">dage.party</span>
+      </h1>
 
-    <footer class="mt-10 text-white/50 text-sm">
+      <p class="text-white/70">
+        A quiet place for small tools, experiments,<br />
+        and open-source side projects.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold text-teal-300">
+        Featured Project
+      </h2>
+
+      <div class="bg-white/10 backdrop-blur
+                  border border-white/20
+                  rounded-2xl p-6 text-left shadow-lg">
+
+        <h3 class="text-xl font-bold mb-2">
+          🎲 Da Random English Name Generator
+        </h3>
+
+        <p class="text-white/70 mb-4 leading-relaxed">
+          A lightweight English name generator built with
+          Cloudflare Pages and Pages Functions.
+          It uses fixed-width text datasets for fast,
+          deterministic name generation at the edge.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="https://github.com/wwwdageparty/da-web-EnglishNameGenerator-cfpage"
+            target="_blank"
+            class="inline-block bg-teal-500 hover:bg-teal-600
+                   text-white font-semibold py-2 px-4 rounded transition">
+            View on GitHub
+          </a>
+
+          <span class="text-sm text-white/50 self-center">
+            Cloudflare Pages · Serverless · Open Source
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-6 text-white/50 text-sm">
       © <span id="year"></span> dage.party
     </footer>
   </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 
 </body>
